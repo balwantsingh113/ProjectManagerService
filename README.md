@@ -1,2 +1,2 @@
 # ProjectManagerService
-This Project is for CTS Case study 
+ A Spring Boot Web Service for Project Manager Full Stack Application
