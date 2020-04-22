@@ -17,7 +17,7 @@ import org.springframework.stereotype.Repository;
 import com.projectmanager.model.User;
 
 /**
- * @author SumeetK
+ * @author Balwant Singh
  *
  */
 @Repository

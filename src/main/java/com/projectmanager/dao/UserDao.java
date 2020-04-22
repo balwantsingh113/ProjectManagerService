@@ -8,7 +8,7 @@ import java.util.List;
 import com.projectmanager.model.User;
 
 /**
- * @author SumeetK
+ * @author Balwant Singh
  *
  */
 

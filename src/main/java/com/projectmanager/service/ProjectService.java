@@ -24,7 +24,7 @@ import com.projectmanager.dao.ProjectDaoImpl;
 import com.projectmanager.model.Project;
 
 /**
- * @author SumeetK
+ * @author Balwant Singh
  *
  */
 

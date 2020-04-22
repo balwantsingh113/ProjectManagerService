@@ -23,7 +23,7 @@ import com.projectmanager.dao.TaskDaoImpl;
 import com.projectmanager.model.Task;
 
 /**
- * @author SumeetK
+ * @author Balwant Singh
  *
  */
 

@@ -24,7 +24,7 @@ import com.projectmanager.dao.UserDaoImpl;
 import com.projectmanager.model.User;
 
 /**
- * @author SumeetK
+ * @author Balwant Singh
  *
  */
 

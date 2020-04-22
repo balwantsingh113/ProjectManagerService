@@ -17,7 +17,7 @@ import javax.persistence.TemporalType;
 import com.fasterxml.jackson.annotation.JsonFormat;
 
 /**
- * @author SumeetK
+ * @author Balwant Singh
  *
  */
 @Entity
