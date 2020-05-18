@@ -1,79 +1,43 @@
-/**
- * 
- */
 package com.projectmanager.service;
 
-import java.util.ArrayList;
 import java.util.List;
 
-import javax.validation.Valid;
-
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.MediaType;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.stereotype.Service;
 
 import com.projectmanager.dao.UserDaoImpl;
 import com.projectmanager.model.User;
 
-/**
- * @author Balwant Singh
- *
- */
-
-@CrossOrigin(
-	    allowCredentials = "true",
-	    origins = "*", 
-	    allowedHeaders = "*", 
-	    methods = {RequestMethod.GET,RequestMethod.POST,RequestMethod.DELETE,RequestMethod.PUT}
-	)
-@RestController
-@RequestMapping("/v1")
+@Service
 public class UserService {
-
-	/** Initialize the LOGGER object */
-	// private static final Log logger = LogFactory.getLog(UserService.class);
-
+	
 	@Autowired
-	private UserDaoImpl userDaoImpl;
+	UserDaoImpl userDaoImpl;
 
-	@PostMapping(value = "/adduser", produces = MediaType.APPLICATION_JSON_VALUE)
-	public User addUser(@Valid @RequestBody User user) {
+	public User addUser(User user) {
+		// TODO Auto-generated method stub
 		return userDaoImpl.addUser(user);
 	}
 
-	@PostMapping(value = "/updateuser", produces = MediaType.APPLICATION_JSON_VALUE)
-	public User updateUser(@Valid @RequestBody User user) {
-		
+	public User updateUser(User user) {
+		// TODO Auto-generated method stub
 		return userDaoImpl.updateUser(user);
 	}
 
-	@GetMapping(value = "/users", produces = MediaType.APPLICATION_JSON_VALUE)
 	public List<User> getUsers() {
-		
-		List<User> userList = new ArrayList<User>();
-		userList = userDaoImpl.getUsers();
-		return userList;
+		// TODO Auto-generated method stub
+		return userDaoImpl.getUsers();
 	}
-	
-	@GetMapping(value = "/user/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
-	public User getUser(@PathVariable int id) {
-		
-		User user = new User();
-		user = userDaoImpl.getUser(id);
-		return user;
+
+	public User getUser(int id) {
+		// TODO Auto-generated method stub
+		return userDaoImpl.getUser(id);
 	}
-	
-	@DeleteMapping("/user/{id}")
-	public void deleteUser(@PathVariable int id) {
+
+	public void deleteUser(int id) {
+		// TODO Auto-generated method stub
 		userDaoImpl.deleteUser(id);
 	}
+	
 
 }

@@ -17,25 +17,29 @@ import org.springframework.mock.web.MockHttpServletRequest;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 
+import com.projectmanager.controller.ProjectController;
+import com.projectmanager.controller.TaskController;
+import com.projectmanager.controller.UserController;
 import com.projectmanager.dao.ProjectDao;
 import com.projectmanager.dao.TaskDao;
 import com.projectmanager.dao.UserDao;
 import com.projectmanager.model.Project;
 import com.projectmanager.model.Task;
 import com.projectmanager.model.User;
-import com.projectmanager.service.ProjectService;
-import com.projectmanager.service.TaskService;
-import com.projectmanager.service.UserService;
 
 @SpringBootTest
 class ProjectManagerServiceApplicationTests {
 
+	public ProjectManagerServiceApplicationTests() {
+		super();
+	}
+
 	@InjectMocks
-	TaskService taskService;
+	TaskController taskService;
 	@InjectMocks
-	UserService userService;
+	UserController userService;
 	@InjectMocks
-	ProjectService projectService;
+	ProjectController projectService;
      
     @Mock
     TaskDao taskDao;
@@ -43,6 +47,8 @@ class ProjectManagerServiceApplicationTests {
     UserDao userDao;
     @Mock
     ProjectDao projectDao;
+    
+    
     
     //******************************** Test Cases for Task*******************************
     @Test
